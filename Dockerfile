@@ -24,7 +24,7 @@ RUN apt-get update -qq \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /etc/apt/sources.list.d/google.list
 
-ARG EMSDK_VERSION="3.1.46"
+ARG EMSDK_VERSION="3.1.55"
 RUN mkdir -p /opt/emsdk \
     && cd /opt/emsdk \
     && curl -SL https://github.com/emscripten-core/emsdk/archive/${EMSDK_VERSION}.tar.gz | tar -xz --strip-components=1 \
@@ -43,7 +43,7 @@ SHELL ["/bin/bash", "-c"]
 
 ENV NVM_DIR=/opt/nvm
 ARG NVM_VERSION="v0.39.2"
-ARG NODE_VERSION="v18.12.0"
+ARG NODE_VERSION="v21.7.1"
 RUN mkdir -p /opt/nvm \
     && ls -lisah /opt/nvm \
     && curl https://raw.githubusercontent.com/nvm-sh/nvm/${NVM_VERSION}/install.sh | bash \
