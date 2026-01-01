@@ -42,8 +42,8 @@ RUN mkdir -p /opt/emsdk \
 SHELL ["/bin/bash", "-c"]
 
 ENV NVM_DIR=/opt/nvm
-ARG NVM_VERSION="v0.39.2"
-ARG NODE_VERSION="v21.7.1"
+ARG NVM_VERSION="v1.2.2"
+ARG NODE_VERSION="v24.12.0"
 RUN mkdir -p /opt/nvm \
     && ls -lisah /opt/nvm \
     && curl https://raw.githubusercontent.com/nvm-sh/nvm/${NVM_VERSION}/install.sh | bash \
